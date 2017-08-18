@@ -62,7 +62,7 @@ int main(void)
   //std_msgs::msg::Float64 uninit(false);
   //std::cout << uninit.data << std::endl;
 
-  // Instead, if you manually initialize the fields, then valgrind is happy.
+  // Instead, if you tell the constructor to initialize the fields, then valgrind is happy.
   std_msgs::msg::Float64 init(true);
   std::cout << init.data << std::endl;
 

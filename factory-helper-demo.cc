@@ -69,7 +69,7 @@ int main(void)
   //std::shared_ptr<std_msgs::msg::Float64> uninit = std_msgs::msg::float64Factory(false);
   //std::cout << uninit->data << std::endl;
 
-  // Instead, if you manually initialize the fields, then valgrind is happy.
+  // Instead, if you initialize the fields through the factory, then valgrind is happy.
   std::shared_ptr<std_msgs::msg::Float64> init = std_msgs::msg::float64Factory(true);
   std::cout << init->data << std::endl;
 

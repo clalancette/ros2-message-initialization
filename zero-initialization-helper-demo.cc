@@ -59,7 +59,7 @@ int main(void)
   //std_msgs::msg::Float64 uninit;
   //std::cout << uninit.data << std::endl;
 
-  // Instead, if you manually initialize the fields, then valgrind is happy.
+  // Instead, if you manually initialize the fields with the helper, then valgrind is happy.
   std_msgs::msg::Float64 init;
   init.zero_initialize();
   std::cout << init.data << std::endl;
