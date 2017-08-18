@@ -111,8 +111,8 @@ int main(void)
   std::cout << init.data << std::endl;
 
   // For compound types (such as Compound), the same problem applies
-  //std::msgs::msg::Compound c_uninit;
-  //std::cout << c_uninit.data << std::endl;
+  //std_msgs::msg::Compound c_uninit;
+  //std::cout << c_uninit.float64.data << std::endl;
   //std::cout << c_uninit.data << std::endl;
 
   // Having a helper to zero initialize all of the fields helps a lot.  The user still needs to remember to call this.
