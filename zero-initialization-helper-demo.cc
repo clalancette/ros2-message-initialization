@@ -5,13 +5,16 @@
 #include <string>
 #include <vector>
 
-// This is a Float64 like it is currently in ROS2; that is, the default
-// constructor does no default initialization of fields.
 namespace std_msgs
 {
 
 namespace msg
 {
+
+// This is a Float64 like it is currently in ROS2; that is, the default
+// constructor does no default initialization of fields.  It has one
+// addition, which is an auto-generated zero_initialize() method to
+// initialize fields to default values.
 
 // message struct
 template<class ContainerAllocator>
@@ -46,6 +49,13 @@ struct Float64_
 
 using Float64 =
     std_msgs::msg::Float64_<std::allocator<void>>;
+
+// This is a fake "Compound" class that I made up, that embeds a Float64 and
+// primitive fields within it.  It doesn't exist in ROS2, but the below is what
+// the generated code would like in current ROS2; that is, the default
+// constructor does no default initialization of fields.  It has one addition,
+// which is an auto-generated zero_initialize() method to initialize fields
+// to default values.
 
 // message struct
 template<class ContainerAllocator>
@@ -115,7 +125,8 @@ int main(void)
   //std::cout << c_uninit.float64.data << std::endl;
   //std::cout << c_uninit.data << std::endl;
 
-  // Having a helper to zero initialize all of the fields helps a lot.  The user still needs to remember to call this.
+  // Having a helper to zero initialize all of the fields helps a lot.  The user
+  // still needs to remember to call this.
   std_msgs::msg::Compound c_init;
   c_init.zero_initialize();
   std::cout << c_init.float64.data << std::endl;

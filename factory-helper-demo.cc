@@ -5,13 +5,19 @@
 #include <string>
 #include <vector>
 
-// This is a Float64 like it is currently in ROS2; that is, the default
-// constructor does no default initialization of fields.
 namespace std_msgs
 {
 
 namespace msg
 {
+
+// This is a Float64 like it is currently in ROS2; that is, the default
+// constructor does no default initialization of fields.  It has two
+// additions:
+// 1.  An auto-generated zero_initialize() method to initialize fields to default
+//     values.
+// 2.  A factory function to generate a class and automatically call the zero
+//     initializer on the class.
 
 // message struct
 template<class ContainerAllocator>
@@ -55,6 +61,15 @@ std::shared_ptr<Float64> float64Factory(bool default_initialize=true)
   }
   return msg;
 }
+
+// This is a fake "Compound" class that I made up, that embeds a Float64 and
+// primitive fields within it.  It doesn't exist in ROS2, but the below is what
+// the generated code would like in current ROS2; that is, the default
+// constructor does no default initialization of fields.  It has two additions:
+// 1.  An auto-generated zero_initialize() method to initialize fields to default
+//     values.
+// 2.  A factory function to generate a class and automatically call the zero
+//     initializer on the class.
 
 // message struct
 template<class ContainerAllocator>
